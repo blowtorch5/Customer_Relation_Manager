@@ -1,0 +1,11 @@
+<nav class="navbar">
+  <div class="navbar-menu">
+    <%= link_to 'alphabetized', alphabetized_customers_path, class: "navbar-item"%>
+    <%= link_to 'missing email', missing_email_customers_path, class: "navbar-item"%>
+  </div>
+</nav>
+<div>
+  <% @customers.each do |customer| %>
+    <%= render customer %>
+  <% end %>
+</div>

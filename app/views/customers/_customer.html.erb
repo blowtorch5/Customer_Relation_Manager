@@ -1,17 +1,16 @@
 <div class="column">
   <div class="card">
     <div class="card-content">
-      <p class="title">
-        <%= customer.full_name %>
-      </p>
-      <p>Name: <%= link_to customer.full_name, customer %></p>
       <% if customer.image.present? %>
         <div class="card-image">
           <figure class="image">
-            <%= image_tag customer.image %>
+            <%= image_tag customer.image, class:"image is-128x128" %>
           </figure>
         </div>
       <% end %>
+      <p class="title">
+        <%= customer.full_name %>
+      </p>
     </div>
     <footer class="card-footer">
       <p class="card-footer-item">
